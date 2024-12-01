@@ -3,12 +3,140 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
+		<title>Furniro Ecommerce</title>
 
 		<link rel="stylesheet" href="css/main.css" />
 	</head>
 	<body>
+		<!-- start header -->
+
+		<div class="header d-flex align-items-center">
+			<div class="container d-flex align-items-center justify-content-between">
+				<div class="logo d-flex align-items-center">
+					<img src="img/Meubel House_Logos-05.png" alt="" />
+					<span>Furniro</span>
+				</div>
+				<div class="d-lg-block d-none">
+					<ul class="nav" id="navLinks">
+						<li class="nav-item">
+							<a class="nav-link protected" href="index.html">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link protected" href="shop.html">Shop</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link protected" href="about.html">About</a>
+						</li>
+						<li class="nav-item protected">
+							<a class="nav-link protected" href="contact.html">Contact</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="heading_bar">
+					<ul class="d-flex align-items-center gap-2" id="navLinks">
+						<li id="accountLink"><a href="register.html">SignUp </a></li>
+						<li>
+							<a class="protected d-lg-block d-none" href="">
+								<i class="fa-solid fa-magnifying-glass"></i>
+							</a>
+						</li>
+						<li>
+							<a class="protected d-lg-block d-none" href="">
+								<i class="fa-regular fa-heart"></i>
+							</a>
+						</li>
+						<li>
+							<a class="protected d-lg-block d-none" href="">
+								<i class="fas fa-shopping-cart"></i
+							></a>
+						</li>
+						<li id="welcomeMessage" style="display: none">
+							Welcome <span id="userName"></span>
+						</li>
+						<li id="logoutLink" style="display: none">
+							<a href="#" onclick="logout()"> LogOut</a>
+						</li>
+						<li class="d-lg-none d-block">
+							<div class="mobile-toggle d-flex justify-content-end">
+								<a
+									href="a"
+									data-bs-toggle="offcanvas"
+									data-bs-target="#offcanvasExample"
+									aria-controls="offcanvasResponsive">
+									<i class="fa-fw fa-solid fa-bars-staggered"></i>
+								</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<!-- end header -->
+		<!-- sart offcanvas  -->
+
+		<div
+			class="offcanvas offcanvas-start"
+			tabindex="-1"
+			id="offcanvasExample"
+			aria-labelledby="offcanvasExampleLabel">
+			<div
+				class="offcanvas-header d-flex justify-content-between align-content-center">
+				<h5 class="offcanvas-title" id="offcanvasLabel">
+					<img src="img/Meubel House_Logos-05.png" alt="" />
+					<span>Furniro</span>
+				</h5>
+				<button
+					type="button"
+					class="btn-close m-0"
+					data-bs-dismiss="offcanvas"
+					aria-label="Close"></button>
+			</div>
+			<div class="offcanvas-body">
+				<ul class="mb-3 d-flex align-items-center justify-content-center">
+					<li>
+						<a class="protected" href="">
+							<i class="fa-solid fa-magnifying-glass"></i>
+						</a>
+					</li>
+					<li class="mx-3">
+						<a class="protected" href="">
+							<i class="fa-regular fa-heart"></i>
+						</a>
+					</li>
+					<li>
+						<a class="protected" href="">
+							<i class="fas fa-shopping-cart"></i
+						></a>
+					</li>
+				</ul>
+				<ul class="nav" id="navLinks">
+					<li class="nav-item">
+						<a class="nav-link protected" href="index.html">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link protected" href="shop.html">Shop</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link protected" href="about.html">About</a>
+					</li>
+					<li class="nav-item protected">
+						<a class="nav-link protected" href="contact.html">Contact</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<!--end  offcanvas  -->
+		<!-- start content -->
+		<main id="content" class="container" style="display: none">
+			<h2>أهلاً بك في موقعنا!</h2>
+			<p>يمكنك الآن الوصول إلى كافة محتويات الموقع.</p>
+		</main>
+		<!-- end content -->
 		<script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 		<script src="../node_modules/@fortawesome/fontawesome-free/js/all.js"></script>
+		<script src="js/main.js"></script>
 	</body>
 </html>

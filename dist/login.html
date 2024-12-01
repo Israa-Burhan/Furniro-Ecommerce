@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Login</title>
+		<link rel="stylesheet" href="css/main.css" />
+	</head>
+	<body>
+		<div class="login">
+			<div class="container">
+				<div class="row min-vh-100">
+					<div
+						class="col-lg-8 col-12 m-auto gap-3 bg-white shadow p-sm-5 px-3 py-5 rounded-2 d-flex flex-column">
+						<div class="title-login">
+							<h1>Login</h1>
+						</div>
+						<div id="login-error-messages"></div>
+
+						<form id="loginForm">
+							<div class="mb-2">
+								<label for="loginEmail">Email:</label>
+								<input
+									type="email"
+									class="form-control"
+									id="loginEmail"
+									name="email"
+									placeholder="Email"
+									required />
+							</div>
+							<div class="mb-2">
+								<label for="loginPassword">Password:</label>
+								<input
+									type="password"
+									class="form-control"
+									id="loginPassword"
+									placeholder="Password"
+									required />
+							</div>
+
+							<div
+								class="text-center d-md-flex align-items-center justify-content-around">
+								<button type="submit" class="btn">Login</button>
+								<p>
+									Don’t have an Account?
+									<a href="register.html">Create account</a>
+								</p>
+							</div>
+						</form>
+						<p id="loginError" style="color: red; display: none">
+							بيانات غير صحيحة، الرجاء المحاولة مجددًا.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+	<script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="../node_modules/@fortawesome/fontawesome-free/js/all.js"></script>
+	<script src="js/main.js"></script>
+</html>

@@ -3,3 +3,11 @@
 @import "mixin";
 @import "vars";
 @import "index";
+@import "register";
+@import "login";
+@import "header";
+.error {
+	color: red;
+	font-size: 0.9em;
+	display: none;
+}

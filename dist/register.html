@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>SignUp</title>
+		<link rel="stylesheet" href="css/main.css" />
+	</head>
+	<body>
+		<div class="register">
+			<div class="container">
+				<div class="row min-vh-100">
+					<div
+						class="col-lg-8 col-12 m-auto gap-3 bg-white shadow p-sm-5 px-3 py-5 rounded-2 d-flex flex-column">
+						<div class="title-register">
+							<h1>Sign Up</h1>
+						</div>
+						<form
+							id="registerForm"
+							onsubmit="event.preventDefault(); validateRegister();">
+							<div class="d-flex align-items-center mb-2">
+								<div class="w-50 m-1">
+									<label for="firstName">First Name:</label>
+									<input
+										type="text"
+										class="form-control"
+										id="firstName"
+										name="firstName"
+										placeholder="First Name" />
+									<span id="firstNameError" class="error"
+										>الاسم الأول يجب أن يكون بين 1-8 حروف</span
+									>
+								</div>
+								<div class="w-50 m-1">
+									<label for="lastName">Last Name:</label>
+									<input
+										type="text"
+										class="form-control"
+										id="lastName"
+										name="lastName"
+										placeholder="Last Name" />
+									<span id="lastNameError" class="error"
+										>الاسم الثاني يجب أن يكون بين 1-8 حروف</span
+									>
+								</div>
+							</div>
+							<div class="mb-2">
+								<label for="email">Email:</label>
+								<input
+									type="email"
+									class="form-control"
+									id="email"
+									name="email"
+									placeholder="Email" />
+								<span id="emailError" class="error"
+									>يجب إدخال البريد الإلكتروني</span
+								>
+							</div>
+							<div class="mb-2">
+								<label for="password">Password:</label>
+								<input
+									type="password"
+									class="form-control"
+									id="password"
+									name="password"
+									placeholder="Password" />
+								<span id="passwordError" class="error"
+									>كلمة المرور يجب أن تحتوي على 8 أحرف وأرقام على الأقل</span
+								>
+							</div>
+							<div class="mb-2">
+								<label for="confirmPassword">confirm password</label>
+								<input
+									type="password"
+									class="form-control"
+									id="confirmPassword"
+									name="confirmPassword"
+									placeholder="Repeat Password" />
+								<span id="confirmPasswordError" class="error"
+									>كلمة المرور غير متطابقة</span
+								>
+							</div>
+							<div
+								class="text-center d-md-flex align-items-center justify-content-around">
+								<button type="submit" class="btn">SignUp</button>
+								<p>Already have an Account? <a href="login.html">Login</a></p>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+	<script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="../node_modules/@fortawesome/fontawesome-free/js/all.js"></script>
+	<script src="js/main.js"></script>
+</html>

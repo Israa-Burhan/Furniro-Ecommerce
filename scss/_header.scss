@@ -1,0 +1,147 @@
+@use "vars" as *;
+@use "mixin" as *;
+@use "global-rules" as *;
+
+//start header
+
+.header {
+	height: 100px;
+
+	.logo {
+		img {
+			width: 50px;
+			height: 32px;
+			@include respond(small) {
+				width: 30px;
+				height: 22px;
+			}
+		}
+		span {
+			color: var(--black);
+			font-family: Montserrat;
+			font-size: 34px;
+			font-weight: 700;
+			@include respond(small) {
+				font-size: var(--font-size-xlarge);
+			}
+		}
+	}
+	.nav {
+		a {
+			color: var(--black);
+			font-size: var(--font-size-medium);
+			font-weight: 500;
+		}
+	}
+
+	.heading_bar {
+		ul {
+			li {
+				a {
+					color: var(--black);
+					font-size: var(--font-size-medium);
+					font-weight: 500;
+				}
+			}
+			.mobile-toggle {
+				svg {
+					width: 40px;
+					height: 22px;
+				}
+			}
+		}
+	}
+}
+
+//end header
+/* تنسيقات الروابط المحمية */
+.protected {
+	pointer-events: none;
+	color: gray;
+}
+
+.protected.active {
+	pointer-events: auto;
+	color: #4a90e2;
+}
+
+/* زر تسجيل الخروج */
+#logoutLink a {
+	background-color: var(--main-color);
+	color: var(--white);
+	padding: 8px 12px;
+	border-radius: 4px;
+	transition: background-color 0.3s ease;
+	@include respond(small) {
+		padding: 6px 9px;
+	}
+}
+
+#logoutLink a:hover {
+	background-color: var(--main-color);
+}
+
+/* تنسيقات الترحيب */
+#welcomeMessage {
+	font-size: var(--font-size-large);
+	color: var(--black);
+	font-weight: 500;
+	@include respond(small) {
+		font-size: var(--font-size-small);
+	}
+}
+
+.offcanvas {
+	width: calc(100% - 50%) !important;
+
+	@include respond(small) {
+		width: calc(100% - 30%) !important;
+	}
+
+	.offcanvas-body {
+		.nav {
+			display: block;
+			a {
+				color: var(--black);
+				font-size: var(--font-size-medium);
+				font-weight: 500;
+			}
+		}
+		/* تنسيقات الروابط المحمية */
+		.protected {
+			pointer-events: none;
+			color: gray;
+		}
+
+		.protected.active {
+			pointer-events: auto;
+			color: #4a90e2;
+		}
+
+		/* زر تسجيل الخروج */
+		#logoutLink a {
+			background-color: var(--main-color);
+			color: var(--white);
+			padding: 8px 12px;
+			border-radius: 4px;
+			transition: background-color 0.3s ease;
+			@include respond(small) {
+				padding: 6px 9px;
+			}
+		}
+
+		#logoutLink a:hover {
+			background-color: var(--main-color);
+		}
+
+		/* تنسيقات الترحيب */
+		#welcomeMessage {
+			font-size: var(--font-size-large);
+			color: var(--black);
+			font-weight: 500;
+			@include respond(small) {
+				font-size: var(--font-size-small);
+			}
+		}
+	}
+}

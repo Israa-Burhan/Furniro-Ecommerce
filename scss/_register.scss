@@ -1,0 +1,91 @@
+@use "global-rules" as *;
+@use "vars" as *;
+@use "mixin" as *;
+
+.register {
+	background-image: url("../img/pexels-nexionly-91484.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	.title-register {
+		h1 {
+			color: var(--main-color);
+			font-size: 32px;
+			font-weight: 700;
+			text-align: center;
+		}
+	}
+	form {
+		label {
+			color: var(--text-color);
+			font-size: var(--font-size-large);
+			font-weight: 700;
+			margin-bottom: 10px;
+		}
+		input {
+			border-radius: 16px;
+			border: 1px solid #c2c5e19d;
+			padding: 12px;
+			outline: 0;
+			font-size: var(--font-size-large);
+			&:focus {
+				border-color: var(--main-color);
+				box-shadow: none;
+			}
+			&::-webkit-input-placeholder {
+				color: #9096b2;
+				font-size: var(--font-size-medium);
+				font-weight: 400;
+			}
+
+			&::-moz-placeholder {
+				color: #9096b2;
+				font-size: var(--font-size-medium);
+				font-weight: 400;
+			}
+
+			&:-ms-input-placeholder {
+				color: #9096b2;
+				font-size: var(--font-size-medium);
+				font-weight: 400;
+			}
+
+			&::-ms-input-placeholder {
+				color: #9096b2;
+				font-size: var(--font-size-medium);
+				font-weight: 400;
+			}
+
+			&::placeholder {
+				color: #9f9f9f;
+				font-size: var(--font-size-medium);
+				font-weight: 400;
+			}
+		}
+	}
+	button {
+		background-color: var(--main-color);
+		color: var(--white);
+		width: 300px;
+		border-radius: 16px;
+		font-size: 17px;
+		font-weight: 700;
+		padding: 13px;
+		margin-top: 10px;
+		&:hover {
+			background-color: var(--main-color);
+		}
+	}
+
+	p {
+		color: #9096b2;
+		font-size: 17px;
+		font-weight: 600;
+		a {
+			text-decoration: none;
+			color: var(--black);
+			font-size: var(--font-size-large);
+			font-weight: 600;
+		}
+	}
+}
